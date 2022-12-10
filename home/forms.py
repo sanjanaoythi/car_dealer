@@ -1,12 +1,21 @@
 from django.contrib.auth.forms import forms
-from home.models import Customer
-from home.models import order
-from home.models import payment
+#from home.models import Customer
+#from home.models import order
+#from home.models import payment
+from django.contrib.auth.forms import UserCreationForm
+from django import forms
+from django.contrib.auth.models import User
+
+
+class CreateUserForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields= ['username','email','password1','password2']
 
 
 
 
-
+"""
 class CustomerForm(forms.ModelForm):
     class Meta:
         model = Customer
@@ -43,3 +52,4 @@ class PaymentForm(forms.ModelForm):
             'O_ID',
 
         ]
+"""
