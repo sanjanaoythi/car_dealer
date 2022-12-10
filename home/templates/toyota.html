@@ -1,0 +1,84 @@
+{% extends 'navbar.html'%}
+{% load static %}
+{% block title %}
+TOYOTA
+{% endblock %}
+
+{% block content%}
+
+<section class="cars" id="cars">
+<div class="container">
+    <h1 class="heading">Brand: <span>Toyota</span></h1>
+    <div class="work-list">
+        
+    <div>
+
+        <div class="work">
+            <img src="{% static 'image/toyota/toyotafortuner.png' %}" alt="">
+            <div class="layer">
+                <h1>Toyota Fortuner</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Toyota Fortuner</h3>
+            <div class="price"> <span>price : </span> 1cr </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> suv
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+
+    </div>
+    <br>
+    <div>
+        <div class="work">
+            <img src="{% static 'image/toyota/toyotacamry.png' %}" alt="">
+            <div class="layer">
+                <h1>Toyota Camry</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>toyota Camry</h3>
+            <div class="price"> <span>price : </span> 90 Lakh </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> sedan
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+    </div>
+<br>
+
+    <div>
+        <div class="work">
+            <img src="{% static 'image/toyota/toyotasupra.png' %}" alt="">
+            <div class="layer">
+                <h1>Toyota Supra</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Toyota Supra</h3>
+            <div class="price"> <span>price : </span> 1.5cr </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> sports
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+    </div>
+
+    </div>
+</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+    {% extends 'navbar.html'%}
+
+    {% load static %}
+    
+    {% block title %}
+    AUDI
+    {% endblock %}
+
+
+{% block content%}
+
+<section class="cars" id="cars">
+    <div class="container">
+        <h1 class="heading" >Brand: <span>Audi</span></h1>
+        <div class="work-list">
+            <div>
+            <div class="work">
+                <img src="{% static 'image/audi/audiq8.png' %}" alt="">
+                <div class="layer">
+                    <h1>Audi Q8</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Audi Q8</h3>
+                <div class="price"> <span>price : </span> 2 cr </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> automatic
+                    <span class="fas fa-circle"></span> petrol
+                    <span class="fas fa-circle"></span> suv
+                </p>
+                <a href="#" class="btn">Order</a>
+            </div>
+
+        </div>
+        <br>
+        <div>
+            <div class="work">
+                <img src="{% static 'image/audi/audia6.png' %}" alt="">
+                <div class="layer">
+                    <h1>Audi A6</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Audi A6</h3>
+                <div class="price"> <span>price : </span> 1.5cr </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> automatic
+                    <span class="fas fa-circle"></span> petrol
+                    <span class="fas fa-circle"></span> sedan
+                </p>
+                <a href="#" class="btn">Order</a>
+            </div>
+        </div>
+<br>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/audi/audis5.png' %}" alt="">
+                <div class="layer">
+                    <h1>Audi S5</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Audi S5</h3>
+                <div class="price"> <span>price : </span> 2.5cr </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> automatic
+                    <span class="fas fa-circle"></span> petrol
+                    <span class="fas fa-circle"></span> sports
+                </p>
+                <a href="#" class="btn">Order</a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

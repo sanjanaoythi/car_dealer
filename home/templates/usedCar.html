@@ -1,0 +1,87 @@
+{% extends 'navbar.html'%}
+
+{% load static %}
+
+{% block title %}
+Used Cars
+{% endblock %}
+
+
+{% block content%}
+
+<section class="cars" id="cars">
+<div class="container">
+    <h1 class="heading"> <span>USED</span> Cars</h1>
+    <div class="work-list">
+        
+    <div>
+
+        <div class="work">
+            <img src="{% static 'image/audi/vehicle-1.png' %}" alt="">
+            <div class="layer">
+                <h1>Audi Q8</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Audi Q8</h3>
+            <div class="price"> <span>price : </span> $62,000/- </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+            </p>
+            <a href="#" class="btn">Ordert</a>
+        </div>
+
+    </div>
+    <br>
+    <div>
+        <div class="work">
+            <img src="{% static 'image/audi/vehicle-2.png' %}" alt="">
+            <div class="layer">
+                <h1>Audi A6</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Audi A6</h3>
+            <div class="price"> <span>price : </span> $62,000/- </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+    </div>
+<br>
+
+    <div>
+        <div class="work">
+            <img src="{% static 'image/audi/vehicle-3.png' %}" alt="">
+            <div class="layer">
+                <h1>Audi ?</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Audi ?</h3>
+            <div class="price"> <span>price : </span> $62,000/- </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+    </div>
+
+    </div>
+</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Customers</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            {{customer_form | crispy}}
+        </fieldset>
+        <button>
+            Submit
+        </button>
+    </form>
+
+</body>
+</html>

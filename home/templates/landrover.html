@@ -1,0 +1,86 @@
+{% extends 'navbar.html'%}
+{% load static %}
+{% block title %}
+LAND ROVER
+{% endblock %}
+
+{% block content%}
+
+<section class="cars" id="cars">
+<div class="container">
+    <h1 class="heading">Brand: <span>Land Rover</span></h1>
+    <div class="work-list">
+        
+    <div>
+
+        <div class="work">
+            <img src="{% static 'image/landrover/landroverdefender.png' %}" alt="">
+            <div class="layer">
+                <h1>Land Rover Defender</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Land Rover Defender</h3>
+            <div class="price"> <span>price : </span> 3cr </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> suv
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+
+    </div>
+    
+    <br>
+    
+    <div>
+        <div class="work">
+            <img src="{% static 'image/landrover/rangeroverevoqe.png' %}" alt="">
+            <div class="layer">
+                <h1>Range Rover Evouqe</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Range Rover Evouqe</h3>
+            <div class="price"> <span>price : </span> 3.8cr</div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span>suv
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+    </div>
+<br>
+<!--
+    <div>
+        <div class="work">
+            <img src="{% static 'image/audi/vehicle-3.png' %}" alt="">
+            <div class="layer">
+                <h1>Audi ?</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Audi ?</h3>
+            <div class="price"> <span>price : </span> $62,000/- </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+    </div>
+-->
+    </div>
+</div>
+</section>
+
+{% endblock %}

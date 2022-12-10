@@ -1,0 +1,84 @@
+{% extends 'navbar.html'%}
+{% load static %}
+{% block title %}
+MERCEDES
+{% endblock %}
+
+{% block content%}
+
+<section class="cars" id="cars">
+<div class="container">
+    <h1 class="heading">Brand: <span>Mercedes</span></h1>
+    <div class="work-list">
+        
+    <div>
+
+        <div class="work">
+            <img src="{% static 'image/mercedes/mercedesbenzgls.png' %}" alt="">
+            <div class="layer">
+                <h1>Mercedes_Benz GLS</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Mercedes_Benz GLS</h3>
+            <div class="price"> <span>price : </span> 4cr </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> suv
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+
+    </div>
+    <br>
+    <div>
+        <div class="work">
+            <img src="{% static 'image/mercedes/mercedesbenzcclass.png' %}" alt="">
+            <div class="layer">
+                <h1>Mercedes_Benz C_Class</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Mercedes_Benz C_Class</h3>
+            <div class="price"> <span>price : </span> 1cr </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> sedan
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+    </div>
+<br>
+
+    <div>
+        <div class="work">
+            <img src="{% static 'image/mercedes/mercedesbenzamggt.png' %}" alt="">
+            <div class="layer">
+                <h1>Mercedes_Benz AMG GT</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Mercedes_Benz AMG GT</h3>
+            <div class="price"> <span>price : </span> 6cr </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> sports
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+    </div>
+
+    </div>
+</div>
+</section>
+
+{% endblock %}

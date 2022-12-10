@@ -1,0 +1,42 @@
+{% extends 'navbar.html'%}
+{% load static %}
+{% block title %}
+AUDI
+{% endblock %}
+
+{% block content%}
+
+<section class="cars" id="cars">
+<div class="container">
+    <h1 class="heading">Type: <span>Convertible</span></h1>
+    <div class="work-list">
+        
+    <div>
+
+        <div class="work">
+            <img src="{% static 'image/bmw/bmwz4.png' %}" alt="">
+            <div class="layer">
+                <h1>BMW Z4</h1>
+            </div>
+        </div>
+        <div class="content">
+            <h3>BMW Z4</h3>
+            <div class="price"> <span>price : </span> 2cr </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> convertible
+            </p>
+            <a href="#" class="btn">Order</a>
+        </div>
+
+    </div>
+    <br>
+    
+    </div>
+</div>
+</section>
+
+{% endblock %}
