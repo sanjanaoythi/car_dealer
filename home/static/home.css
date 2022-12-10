@@ -692,16 +692,9 @@ section{
 }
 
 .layer a{
-    margin-top: 10px;
-    color: #fcf64d;
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    background: #fff;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    text-align: center;
+ 
+    color: #000;
+  
 }
 
 .work:hover img{
