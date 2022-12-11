@@ -50,7 +50,7 @@ def sedans_view(request):
 def sports_view(request):
     return render(request,'sports.html')
 def convertibles_view(request):
-    return render(request,'convertible.html')
+    return render(request,'convertibles.html')
 def used_view(request):
     return render(request,'usedCar.html')
 def audi_view(request):
