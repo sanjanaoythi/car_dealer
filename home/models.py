@@ -16,10 +16,10 @@ class Customer(models.Model):
 class order(models.Model):
     O_ID = models.IntegerField(primary_key = True)
     Car_ID = models.ForeignKey(cars, default='1', on_delete=models.CASCADE)
-    Cus_ID = models.ForeignKey(Customer, default='1', on_delete=models.CASCADE)
+    id = models.ForeignKey(User, default='1', on_delete=models.CASCADE)
     Date_time = models.DateTimeField()
     Status = models.CharField(max_length=30)
-    Address = models.CharField(max_length=30)
+    
    
 
 class payment(models.Model):

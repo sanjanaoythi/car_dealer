@@ -39,5 +39,5 @@ urlpatterns = [
    # path('customer/',home.views.customer),
    # path('order/',home.views.Order),
     path('registration/',home.views.registrationPage,name='registration'),
-    path('',home.views.view,name='home'),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
