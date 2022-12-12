@@ -17,9 +17,13 @@
     <link rel="stylesheet" href="{% static 'home.css' %}">
     <title>
         {% block title%}
+
         {% endblock %}
     </title>
 </head>
+
+
+
 <body>
     
 <header class="header">
@@ -29,14 +33,14 @@
     <a href="#" class="logo"> <span>UAP</span>Auto's</a>
 
     <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#brands">Brands</a>
-        <a href="#types">Types</a>
-        <a href="#contact">contact</a>
+        <a href="http://127.0.0.1:8000/#home">home</a>
+        <a href="http://127.0.0.1:8000/#brands">Brands</a>
+        <a href="http://127.0.0.1:8000/#types">Types</a>
+        <a href="http://127.0.0.1:8000/#contact">contact</a>
     </nav>
 
     <div id="login-btn">
-        <button class="btn">login</button>
+    <a href="{%  url 'logout' %}">  <button class="btn">logout</button></a>  
         <i class="far fa-user"></i>
     </div>
 
@@ -52,9 +56,10 @@
   <div class="box-container">
       <div class="box">
           <h3>quick links</h3>
-          <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
-          <a href="#"> <i class="fas fa-arrow-right"></i> vehicles </a>
-          <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+          <a href="http://127.0.0.1:8000/#home"> <i class="fas fa-arrow-right"></i> home </a>
+          <a href="http://127.0.0.1:8000/#brands"> <i class="fas fa-arrow-right"></i> brands </a>
+          <a href="http://127.0.0.1:8000/#types"> <i class="fas fa-arrow-right"></i> types </a>
+          <a href="http://127.0.0.1:8000/#contact"> <i class="fas fa-arrow-right"></i> contact </a>
       </div>
 
       <div class="box">

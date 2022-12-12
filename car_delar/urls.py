@@ -35,6 +35,7 @@ urlpatterns = [
     path('mercedes/',home.views.mercedes_view,name='mercedes'),
     path('honda/',home.views.honda_view,name='honda'),
     path('payment/',home.views.payment_view,name='paymnet'),
+    path('logout/', home.views.logoutUser,name='logout'),
    # path('customer/',home.views.customer),
    # path('order/',home.views.Order),
     path('registration/',home.views.registrationPage,name='registration'),

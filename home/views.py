@@ -1,7 +1,8 @@
-from django.shortcuts import render,HttpResponse, redirect
+from django.shortcuts import render,HttpResponse, redirect ,HttpResponseRedirect
 #from home.forms import CustomerForm
 #from home.forms import OrderForm
 #from home.forms import PaymentForm
+from django.urls import reverse
 from home.forms import CreateUserForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -34,7 +35,7 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return HttpResponseRedirect('/home')
         else:
             messages.info(request,'Username or password is incorrect' )
     
