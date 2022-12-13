@@ -50,7 +50,7 @@ def registrationPage(request):
     return render(request, 'registration.html', context)
     
 
-
+@login_required(login_url='login')
 def home_view(request):
     return render(request,'home.html')
 def login_view(request):
