@@ -35,10 +35,8 @@ urlpatterns = [
     path('landrover/',home.views.landrover_view,name='landrover'),
     path('mercedes/',home.views.mercedes_view,name='mercedes'),
     path('honda/',home.views.honda_view,name='honda'),
-    path('payment/',home.views.payment_view,name='paymnet'),
-    
-   # path('customer/',home.views.customer),
-   # path('order/',home.views.Order),
+    path('addcar/',home.views.addcar_view,name='addcar'),
+    path('order/',home.views.order_view,name='order'),
     path('registration/',home.views.registrationPage,name='registration'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -22,34 +22,25 @@
 <body>
 <!--navbar section-->
 <header class="header">
-
     <div id="menu-btn" class="fas fa-bars"></div>
-
     <a href="http://127.0.0.1:8000/" class="logo"> <span>UAP</span>Auto's</a>
-
     <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#brands">Brands</a>
         <a href="#types">Types</a>
         <a href="#contact">contact</a>
     </nav>
-
     <div id="login-btn">
         <a href="{%  url 'logout' %}"><button class="btn">logout</button></a>  
         <i class="far fa-user"></i>
     </div>
-
 </header> 
+
 
 <!--home section-->
 <section class="home" id="home">
-
     <h3 data-speed="-2" class="home-parallax">discover your car</h3>
-
     <img data-speed="5" class="home-parallax" src="{% static 'image/home-img.png' %}" alt="">
-
-    <a data-speed="7" href="#" class="btn home-parallax">explore cars</a>
-
 </section>
 
 
@@ -101,10 +92,6 @@
 
 
 <!--Types section-->
-
-
-
-
 <section class="cars" id="types">
     <div class="container">
         <h1 class="heading"> <span>Types</span> of cars</h1>
@@ -146,20 +133,12 @@
 </section>
 
 
-
-
-
-
 <!--contact section-->
 
 <section class="contact" id="contact">
-
     <h1 class="heading"><span>contact</span> us</h1>
-
     <div class="row">
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.7936309898637!2d90.38692567427805!3d23.754737478667323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b0a98eaf3b%3A0xc692432124fcc478!2sUniversity%20of%20Asia%20Pacific%20%7C%20UAP!5e0!3m2!1sen!2sbd!4v1670612238707!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <!--  <iframe class="map" src="https://www.google.com/maps/place/University+of+Asia+Pacific+%7C+UAP/@23.7547375,90.3869257,17z/data=!4m12!1m6!3m5!1s0x3755b8b0a98eaf3b:0xc692432124fcc478!2sUniversity+of+Asia+Pacific+%7C+UAP!8m2!3d23.7547375!4d90.3895006!3m4!1s0x3755b8b0a98eaf3b:0xc692432124fcc478!8m2!3d23.7547375!4d90.3895006" allowfullscreen="" loading="lazy"></iframe>-->
-
         <form action="">
             <h3>get in touch</h3>
             <input type="text" placeholder="your name" class="box">
@@ -168,14 +147,11 @@
             <textarea placeholder="your message" class="box" cols="30" rows="10"></textarea>
             <input type="submit" value="send message" class="btn">
         </form>
-
     </div>
-
 </section>
 
 <!--footer section-->
 <section class="footer" id="footer">
-
     <div class="box-container">
         <div class="box">
             <h3>quick links</h3>
@@ -184,8 +160,7 @@
             <a href="http://127.0.0.1:8000/#types"> <i class="fas fa-arrow-right"></i> types </a>
             <a href="http://127.0.0.1:8000/#contact"> <i class="fas fa-arrow-right"></i> contact </a>
         </div>
-  
-        
+     
         <div class="box">
             <h3>contact info</h3>
             <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
@@ -201,14 +176,11 @@
         </div>
   
     </div>
-  
     <div class="credit"> created for CSE 310 | all rights reserved </div>
 </section>
 
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
 <script src=" {% static 'home.js' %}"></script>
-
 </body>
 </html>

@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.div2{
+    background-color: rgb(0, 0, 0);
+    width: 38%;
+    height: 850px;
+    float: left;
+    padding: 0;
+}
+
+.div2 img{
+    width: 100%;
+    height:850px;
+    float: right;
+    
+}
+.div1{
+
+    /* background-color: rgb(0, 0, 0); */
+    background: linear-gradient(180deg, #7ab36b6c 0%, rgba(255, 255, 255, 0) 100%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 62%;
+    height: 850px;
+    float: left;
+    font-family: 'Germania One', cursive;
+    
+
+}
+.logtxt{
+margin-top: 50px;
+margin-bottom:50px;
+color:#0a581b;
+font-size: 3.8rem;
+padding: 2px;
+font-family: 'Piedra', cursive;
+text-align: center;
+}
+.form-group{
+    width: 40%;
+    
+
+}
+label{
+    font-size: 1rem;
+    font-family: 'Germania One', cursive;
+    color: #0a581b;
+    justify-content: left;
+    font-weight: bold;
+}
+fieldset{
+    border: none;
+    color: #0a581b;
+    font-family: 'Germania One', cursive;
+}
+select,input,
+textarea{
+    height: 10%;
+    width: 25%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 0.9rem;
+    background-color:#D9D9D9;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    color: #0a581b;
+    border-bottom: 2px solid #1ec242;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+}
+
+#csubmit{
+    flex: right;
+    display: block;
+    width:120px ;
+    height: 40px;
+    margin: 1.5rem;
+    background-color:  #0a581b96;
+    border-radius: 12px ;
+    border-color:  #0a581b96;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#rtha{
+    /* text-decoration: none; */
+    color: #0a581b96;
+    /* margin-left: 100px; */
+}

@@ -1,13 +1,11 @@
 from django.shortcuts import render,HttpResponse, redirect ,HttpResponseRedirect
-#from home.forms import CustomerForm
-#from home.forms import OrderForm
-#from home.forms import PaymentForm
 from django.urls import reverse
 from home.forms import CreateUserForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from home.models import cars
 # Create your views here.
 
 def loginpage(request):
@@ -107,3 +105,35 @@ def mercedes_view(request):
 @login_required(login_url='login')
 def payment_view(request):
     return render(request,'payment.html')
+
+
+
+@login_required(login_url='login')   
+def order_view(request):
+    if(request.method=='POST'):
+        type=request.POST['type']
+        brand=request.POST['brand']
+        model=request.POST['model']
+        status=request.POST['status']
+        image=request.POST['image']
+        price=request.POST['price']
+
+      
+    return render(request,'addcar.html')
+
+
+@login_required(login_url='login')   
+def addcar_view(request):
+    if(request.method=='POST'):
+        type=request.POST['type']
+        brand=request.POST['brand']
+        model=request.POST['model']
+        status=request.POST['status']
+        engine=request.POST['engine']
+        image=request.POST['image']
+        price=request.POST['price']
+
+        details= cars(Type=type,Brand=brand,Model=model,Status=status,Engine=engine,Price=price,picture=image)
+        details.save()
+      
+    return render(request,'addcar.html')

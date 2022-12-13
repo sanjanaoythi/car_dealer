@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    
+    <title>Car Details</title>
+   <!-- <link rel="stylesheet" href="{% static 'addcar.css' %}">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="div1">
+        <center>
+            <h1 class="logtxt">Car  Details</h1>
+    <form method="POST" >
+        <fieldset>
+
+            {% csrf_token %}
+            
+            <label for="status" class="lbl">Status: </label>
+            <input type="radio" name = "status" id="new" value="New" required> New
+            <input type="radio" name = "status" id="used" value="Used" required> Used
+
+            <br>
+
+
+            <label for="type" class="lbl">Type: </label>
+            <input type="radio" name = "type" id="sedan" value="Sedan" required> Sedan 
+            <input type="radio" name = "type" id="suv" value="SUV" required> SUV
+            <input type="radio" name = "type" id="sports" value="Sports" required>Sports
+            <input type="radio" name = "type" id="convertible" value="Convertible" required>Convertible
+            
+
+            <br>
+
+
+            <label for="brand" class="lbl">Brand: </label>
+            <input type="radio" name = "brand" id="audi" value="Audi" required> Audi
+            <input type="radio" name = "brand" id="bmw" value="BMW" required> BMW
+            <input type="radio" name = "brand" id="honda" value="Honda" required>Honda
+            <input type="radio" name = "brand" id="landrover" value="Land-Rover" required>Land-Rover
+            <input type="radio" name = "brand" id="mercedes" value="Mercedes" required>Mercedes
+            <input type="radio" name = "brand" id="toyota" value="Toyota" required>Toyota
+
+            <br>
+
+            <label for="engine" class="lbl">Engine: </label>
+            <input type="radio" name = "engine" id="petrol" value="petrol" required>petrol
+            <input type="radio" name = "engine" id="diesle" value="diesel" required>diesel
+
+            <br>
+
+            <label for="model">Model: </label>
+            <input type="text" name = "model" placeholder="Enter Cars model" required>
+            <br>
+
+            <label for="price">Price: </label>
+            <input type="text" name = "price" placeholder="Enter Cars Price" required>
+            <br>
+
+            <label for="image">Image: </label>
+            <input type="file" name = "image" accept="image/*" required>
+            <br>
+            
+           
+
+        </fieldset>
+        
+        <button id="csubmit">Confirm</button>
+        <a id ="rtha" href="/home">Return to home</a>
+    </form>
+
+    </center>
+        
+</body>
+</html>
