@@ -108,4 +108,3 @@ def payment_view(request):
 
 
 
-
