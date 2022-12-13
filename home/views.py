@@ -105,6 +105,3 @@ def mercedes_view(request):
 @login_required(login_url='login')
 def payment_view(request):
     return render(request,'payment.html')
-
-
-
