@@ -22,7 +22,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls,name='admin'),
     path('',home.views.home_view,name='home'),
-    path('login/', home.views.login_view,name='login'),
+    path('login/', home.views.loginpage,name='login'),
+    path('logout/', home.views.logoutUser,name='logout'),
     path('suvs/',home.views.suvs_view,name='suvs'),
     path('sedans/',home.views.sedans_view,name='sedans'),
     path('sports/',home.views.sports_view,name='sports'),
@@ -35,7 +36,7 @@ urlpatterns = [
     path('mercedes/',home.views.mercedes_view,name='mercedes'),
     path('honda/',home.views.honda_view,name='honda'),
     path('payment/',home.views.payment_view,name='paymnet'),
-    path('logout/', home.views.logoutUser,name='logout'),
+    
    # path('customer/',home.views.customer),
    # path('order/',home.views.Order),
     path('registration/',home.views.registrationPage,name='registration'),

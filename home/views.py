@@ -10,6 +10,30 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
+def loginpage(request):
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.info(request,'Username or password is incorrect' )
+    
+    return render(request,'login.html')
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
+
+
+
+
 def registrationPage(request):
     form = CreateUserForm()
     
@@ -25,28 +49,6 @@ def registrationPage(request):
     context ={'form':form}
     return render(request, 'registration.html', context)
     
-def login_view(request):
-
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-
-        user = authenticate(request, username=username, password=password)
-
-        if user is not None:
-            login(request, user)
-            return HttpResponseRedirect('/home')
-        else:
-            messages.info(request,'Username or password is incorrect' )
-    
-    return render(request,'login.html')
-
-
-def logoutUser(request):
-    logout(request)
-    return redirect('login')
-
-
 
 
 def home_view(request):
