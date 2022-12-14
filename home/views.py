@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from home.models import cars, order
+
 # Create your views here.
 
 def loginpage(request):
@@ -144,3 +145,11 @@ def addcar_view(request):
         details.save()
       
     return render(request,'addcar.html')
+
+
+
+def updatepass_view(request,user_name):
+   
+
+
+    return render(request, 'update_password.html')
