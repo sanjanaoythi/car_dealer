@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from home.models import cars
+from home.models import cars, order
 # Create your views here.
 
 def loginpage(request):
@@ -77,6 +77,13 @@ def used_view(request):
 
 @login_required(login_url='login')
 def audi_view(request):
+    # status = request.cars.get('Status')
+    # car_id = request.cars.get('Car_ID')
+    # userID = request.user.get('id')
+
+    # order.object.create(Status=status,Car_ID=car_id,id=userID)
+    # return redirect('audi.html')
+
     return render(request,'audi.html')
 
 @login_required(login_url='login')
