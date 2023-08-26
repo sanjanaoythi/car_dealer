@@ -1,0 +1,46 @@
+{% extends 'navbar.html'%}
+
+{% load static %}
+
+{% block title %}
+Rent Confirmation
+{% endblock %}
+
+{% block content%}
+
+<div class="container">
+    <h1 class="heading" >Rent Confirmation</h1>
+    <div class="work-list">
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/audi/audis5.png' %}" alt="">
+                <div class="layer">
+                    <h1>Audi S5</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Audi S5</h3>
+                <div class="price"> <span>Car ID : </span> audi_s5_0 </div>
+                <p>
+                    Brand: Audi
+                    <span class="fas fa-circle"></span> automatic
+                    <span class="fas fa-circle"></span> petrol
+                    <span class="fas fa-circle"></span> sports
+                    <span class="fas fa-circle"></span>Rent: 1000 Taka/Hour
+                </p>
+                <form method="POST" >
+                    {% csrf_token %}
+                    <fieldset>
+                        <label for="price">Hours: </label>
+                        <input type="text" name = "price" placeholder="Enter hours you want" required>
+                        <br>
+                    </fieldset>
+                </form>
+                <a href="http://127.0.0.1:8000/#home" class="btn">Submit</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'navbar.html'%}
+
+{% load static %}
+
+{% block title %}
+RENT
+{% endblock %}
+
+{% block content%}
+
+<section class="cars" id="cars">
+<div class="container">
+    <h1 class="heading" >Car <span>Renting</span></h1>
+    <div class="work-list">
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/audi/audis5.png' %}" alt="">
+                <div class="layer">
+                    <h1>Audi S5</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Audi S5</h3>
+                <div class="price"> <span>Car ID : </span> audi_s5_0 </div>
+                <p>
+                    Brand: Audi
+                    <span class="fas fa-circle"></span> automatic
+                    <span class="fas fa-circle"></span> petrol
+                    <span class="fas fa-circle"></span> sports
+                    <span class="fas fa-circle"></span>Rent: 1000 Taka/Hour
+                </p>
+                <a href="http://127.0.0.1:8000/rentconfirmation/" class="btn">Rent</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/bmw/bmwz4.png' %}" alt="">
+                <div class="layer">
+                    <h1>BMW Z4</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>BMW Z4</h3>
+                <div class="price"> <span>Car ID : </span> bmw_z4_0 </div>
+                <p>
+                    Brand:BMW
+                    <span class="fas fa-circle"></span> automatic
+                    <span class="fas fa-circle"></span> petrol
+                    <span class="fas fa-circle"></span> convertible
+                    <span class="fas fa-circle"></span>Rent: 5000 Taka/Hour
+                </p>
+                <a href="#" class="btn">Rent</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/landrover/landroverdefender.png' %}" alt="">
+                <div class="layer">
+                    <h1>Land Rover Defender</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Land Rover Defender</h3>
+                <div class="price"> <span>Car ID : </span> land_rover_defender_0 </div>
+                <p>
+                    Brand:Land Rover
+                    <span class="fas fa-circle"></span> automatic
+                    <span class="fas fa-circle"></span> petrol
+                    <span class="fas fa-circle"></span> suv
+                    <span class="fas fa-circle"></span>Rent: 3500 Taka/Hour
+                </p>
+                <a href="#" class="btn">Rent</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+{% endblock %}

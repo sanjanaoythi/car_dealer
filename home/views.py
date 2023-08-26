@@ -47,7 +47,13 @@ def registrationPage(request):
      
     context ={'form':form}
     return render(request, 'registration.html', context)
-    
+@login_required(login_url='login')
+def rent_view(request):
+    return render(request,'rent.html')
+
+@login_required(login_url='login')
+def rentconfirmation_view(request):
+    return render(request,'rentconfirmation.html')   
 
 @login_required(login_url='login')
 def home_view(request):
@@ -114,7 +120,9 @@ def mercedes_view(request):
 def payment_view(request):
     return render(request,'payment.html')
 
-
+@login_required(login_url='hire')
+def hire_view(request):
+    return render(request,'hire.html')
 
 @login_required(login_url='login')   
 def order_view(request):
@@ -152,4 +160,4 @@ def updatepass_view(request,user_name):
    
 
 
-    return render(request, 'update_password.html')
+    return render(request, 'updatepass.html')

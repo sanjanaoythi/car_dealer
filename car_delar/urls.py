@@ -37,7 +37,10 @@ urlpatterns = [
     path('honda/',home.views.honda_view,name='honda'),
     path('addcar/',home.views.addcar_view,name='addcar'),
     path('order/',home.views.order_view,name='order'),
+    path('hire/',home.views.hire_view,name='hire'),
     path('registration/',home.views.registrationPage,name='registration'),
     path('updatepass/',home.views.updatepass_view,name='updatepass'),
+    path('rent/',home.views.rent_view,name='rent'),
+    path('rentconfirmation/',home.views.rentconfirmation_view,name='rentconfirmation'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
