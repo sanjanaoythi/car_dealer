@@ -12,6 +12,7 @@ class cars(models.Model):
     Status = models.CharField(max_length=30)
     Model = models.CharField(max_length=30)
     Engine = models.CharField(max_length=30)
+    Transmission = models.CharField(max_length=30,default="Auto")
     picture = models.ImageField()
     Price = models.CharField(max_length=10)
 
