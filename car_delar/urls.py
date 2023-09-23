@@ -43,4 +43,5 @@ urlpatterns = [
     path('rent/',home.views.rent_view,name='rent'),
     path('rentconfirmation/',home.views.rentconfirmation_view,name='rentconfirmation'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

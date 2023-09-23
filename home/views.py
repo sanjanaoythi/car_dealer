@@ -5,7 +5,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from home.models import cars, order
+from home.models import Car, order
+from .forms import CarForm
 
 # Create your views here.
 
@@ -140,19 +141,14 @@ def order_view(request):
 
 @login_required(login_url='login')   
 def addcar_view(request):
-    if(request.method=='POST'):
-        type=request.POST['type']
-        brand=request.POST['brand']
-        model=request.POST['model']
-        status=request.POST['status']
-        engine=request.POST['engine']
-        image=request.POST['image']
-        price=request.POST['price']
-
-        details= cars(Type=type,Brand=brand,Model=model,Status=status,Engine=engine,Price=price,picture=image)
-        details.save()
-      
-    return render(request,'addcar.html')
+    if request.method == 'POST':
+        form = CarForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return render(request, 'addcar.html') 
+    else:
+        form = CarForm()
+    return render(request, 'addcar.html', {'form': form})
 
 
 
