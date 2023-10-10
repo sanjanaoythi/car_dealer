@@ -1,0 +1,75 @@
+.newcontainer {
+    text-align: center;
+}
+.newheading {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 4.5rem;
+    color:var(--black);
+}
+.newcar-details-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.newcar-image {
+    flex: 1;
+}
+
+.newcar-image img {
+    max-width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.newcar-details {
+    flex: 1;
+    text-align: left;
+    padding: 25px;
+    font-size: 20px;
+}
+
+.newcar-details h3 {
+    font-size: 40px; /* Increased font size */
+    margin-bottom: 10px;
+}
+
+.newprice {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.newcar-info {
+    font-size: 16px; /* Increased font size */
+    margin-top: 10px;
+}
+
+.newrent-form {
+    margin-top: 20px;
+}
+
+.newinput-field {
+    width: 270px;
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    font-size: 16px; /* Font size for the input field */
+    color: #333; /* Text color */
+}
+
+.newinput-field::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+.newbtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
