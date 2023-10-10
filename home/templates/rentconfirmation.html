@@ -1,4 +1,4 @@
-{% extends 'navbar.html'%}
+{% extends 'navbar.html' %}
 
 {% load static %}
 
@@ -6,41 +6,80 @@
 Rent Confirmation
 {% endblock %}
 
-{% block content%}
+{% block content %}
+ <!-- custom css file link  -->
+ <link rel="stylesheet" href="{% static 'rent.css' %}">
+ <link rel="stylesheet" href="{% static 'order.css' %}">
 
-<div class="container">
-    <h1 class="heading" >Rent Confirmation</h1>
-    <div class="work-list">
+<div class="newcontainer">
+    <h1 class="newheading">Rent Confirmation</h1>
+    <div class="newcar-details-container">
 
-        <div>
-            <div class="work">
-                <img src="{% static 'image/audi/audis5.png' %}" alt="">
-                <div class="layer">
-                    <h1>Audi S5</h1>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Audi S5</h3>
-                <div class="price"> <span>Car ID : </span> audi_s5_0 </div>
-                <p>
-                    Brand: Audi
-                    <span class="fas fa-circle"></span> automatic
-                    <span class="fas fa-circle"></span> petrol
-                    <span class="fas fa-circle"></span> sports
-                    <span class="fas fa-circle"></span>Rent: 1000 Taka/Hour
-                </p>
-                <form method="POST" >
-                    {% csrf_token %}
-                    <fieldset>
-                        <label for="price">Hours: </label>
-                        <input type="text" name = "price" placeholder="Enter hours you want" required>
-                        <br>
-                    </fieldset>
-                </form>
-                <a href="http://127.0.0.1:8000/#home" class="btn">Submit</a>
-            </div>
+        <!-- Car Image on the Left -->
+        <div class="newcar-image">
+            <img src="{% static 'image/audi/audis5.png' %}" alt="Audi S5">
         </div>
 
+        <!-- Car Details on the Right -->
+        <div class="newcar-details">
+            <h3>Audi S5</h3>
+            <div class="newprice"> <span>Car ID : </span> audi_s5_0 </div>
+            <p>
+                Brand: Audi
+                <span class="fas fa-circle" style="color: green"></span> automatic
+                <span class="fas fa-circle" style="color: green"></span> petrol
+                <span class="fas fa-circle" style="color: green"></span> sports
+                <br><b>Rent: 1000 Taka/Hour</b>
+            </p>
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset>
+                    <div class="newinput-field">
+                        <label for="price">Hours: </label>
+                        <input type="number" id="hours" name="price" placeholder="Enter hours you want" required>
+                    </div>
+                    <br>
+                </fieldset>
+            </form>
+            <button class="newbtn" onclick="
+                // JavaScript code to calculate and display the cost
+                var hoursInput = document.getElementById('hours');
+                var hours = parseFloat(hoursInput.value);
+                var hourlyRate = 50000; // Example hourly rate of 50000 Taka
+                var totalCost = hours * hourlyRate;
+                var rentedHours = document.getElementById('rentedHours');
+                rentedHours.textContent = hours + (hours === 1 ? ' hour' : ' hours');
+                var costDisplay = document.getElementById('cost');
+                costDisplay.textContent = totalCost + ' Taka';
+                // Show the modal
+                document.getElementById('id01').style.display = 'block';
+            " style="width:auto;">
+                Order
+            </button>
+
+            <div id="id01" class="modal">
+                <form class="modal-content animate">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="{% static 'image/audi/audis5.png' %}" alt="Avatar" class="avatar">
+                  </div>
+                  <div class="xcontainer">
+                    <label><b>Car name: </b>Audi S5</label><br>
+                    <label><b>Car id:</b> Audi_s5_0</label><br>
+                    <label><b>Brand: </b>Audi | Automatic | Petrol | Sports</b></label>
+                    <br><br>
+                    <label>Renting for <span id="rentedHours"></span></label>
+                    <br>
+                    <label>Total cost <span id="cost"></span></label>
+                    <br>
+                  </div>
+                  <div class="xcontainer" style="background-color:#f1f1f1">
+                    <a href="https://www.youtube.com/"><button type="xbutton" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Confirm Order</button></a>
+                  </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
+
 {% endblock %}
