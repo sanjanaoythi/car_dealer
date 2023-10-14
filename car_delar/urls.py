@@ -36,6 +36,7 @@ urlpatterns = [
     path('mercedes/',home.views.mercedes_view,name='mercedes'),
     path('honda/',home.views.honda_view,name='honda'),
     path('addcar/',home.views.addcar_view,name='addcar'),
+    path('rentcars/',home.views.rentcars_view,name='rentcars'),
     path('order/',home.views.order_view,name='order'),
     path('hire/',home.views.hire_view,name='hire'),
     path('registration/',home.views.registrationPage,name='registration'),
