@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from home.models import Car, order
-from .forms import CarForm
+from .forms import CarForm,RentForm
 
 # Create your views here.
 
@@ -159,7 +159,16 @@ def addcar_view(request):
         form = CarForm()
     return render(request, 'addcar.html', {'form': form})
 
-
+@login_required(login_url='login')   
+def rentcars_view(request):
+    if request.method == 'POST':
+        form = RentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return render(request, 'rentcars.html') 
+    else:
+        form = RentForm()
+    return render(request, 'rentcars.html', {'form': form})
 
 def updatepass_view(request,user_name):
    
