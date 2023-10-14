@@ -1,0 +1,16 @@
+{% load static %}
+
+{% block title %}
+ADD RENT CAR
+{% endblock %}
+
+{% block content %}
+<h1 class="logtxt">Car Details</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="csubmit">Confirm</button>
+</form>
+
+<a href="{% url 'home' %}">Return to home</a>
+{% endblock %}
