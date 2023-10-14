@@ -4,7 +4,7 @@ from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
-from .models import Car
+from .models import Car,rentcars
 
 class CreateUserForm(UserCreationForm):
     class Meta:
@@ -16,3 +16,8 @@ class CarForm(forms.ModelForm):
     class Meta:
         model = Car
         fields = '__all__'  # Include all fields from the Car model
+
+class RentForm(forms.ModelForm):
+    class Meta:
+        model = rentcars
+        fields = '__all__' 
