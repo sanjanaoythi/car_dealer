@@ -48,6 +48,15 @@ def registrationPage(request):
      
     context ={'form':form}
     return render(request, 'registration.html', context)
+
+
+@login_required(login_url='login')
+def car_view(request):
+    car = Car.objects.all()
+    return render(request, 'car.html', {'Car': car})
+
+
+
 @login_required(login_url='login')
 def rent_view(request):
     return render(request,'rent.html')

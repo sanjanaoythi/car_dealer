@@ -1,0 +1,91 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}
+Car
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Buy car</title>
+     <link rel="icon" href="{% static 'assets/dobg.jpg' %}">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home.js' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+
+</head>
+<body>
+    <div id="preloader">
+
+    </div>
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <h1 class="display-4 text-uppercase text-center mb-5">Choose Your Car</h1>
+            <div class="row">
+                {% for i in Car %}
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-3" src="{{i.image.url}}" alt="">
+                        <h4 class="cartitle text-uppercase mb-4">{{i.model}}</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="header px-2">
+                                <span>{{i.type}}</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="header px-2">
+                                <span>brand</span>
+                            </div>
+                            <div class="header px-2 border-left">
+                                <span>{{i.brand}}</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="header px-2">
+                                <span>engine</span>
+                            </div>
+                            <div class="header px-2 border-left">
+                                <span>{{i.engine}}</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="header px-2">
+                                <span>Transmisson</span>
+                            </div>
+                            <div class="header px-2 border-left">
+                                <span>{{i.transmission}}</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="header px-2">
+                                <span>Price</span>
+                            </div>
+                            <div class="header px-2 border-left">
+                                <span>{{i.price}} BDT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script>
+		var loader=document.getElementById("preloader");
+		window.addEventListener("load",function(){
+		  loader.style.display="none";
+
+		});
+	  </script>
+
+</body>
+
+</html>
+{% endblock %}
