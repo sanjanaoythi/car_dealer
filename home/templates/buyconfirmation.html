@@ -1,0 +1,61 @@
+{% extends 'navbar.html' %}
+
+{% load static %}
+
+{% block title %}
+Rent Confirmation
+{% endblock %}
+
+{% block content %}
+ <!-- custom css file link  -->
+ <link rel="stylesheet" href="{% static 'rent.css' %}">
+ <link rel="stylesheet" href="{% static 'order.css' %}">
+
+<div class="newcontainer">
+    <h1 class="newheading">Buy Confirmation</h1>
+    <div class="newcar-details-container">
+
+
+        
+        <div class="newcar-image">
+            <img src="{% static 'image/parts/hood.webp' %}" alt="Hood">
+        </div>
+        <div class="newcar-details">
+            <h3>Hood</h3>
+            <p>
+                <span class="fas fa-circle" style="color: green"></span> Titanium
+                <span class="fas fa-circle" style="color: green"></span> Grade A
+                <br><b>Price: 5000 Taka</b>
+            </p>
+            <button class="newbtn" onclick="
+                // Show the modal
+                document.getElementById('id01').style.display = 'block';
+            " style="width:auto;">
+                Buy
+            </button>
+            <div id="id01" class="modal">
+                <form class="modal-content animate">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="{% static 'image/parts/hood.webp' %}" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="xcontainer">
+                        <label><b>Material: </b>Titanium</label><br>
+                        <label><b>Grade A:</b></label><br>
+                        <br><br>
+                        <label>Total cost 5000 taka<span id="rentedHours"></span></label>
+                        <br>
+                    </div>
+                    <div class="xcontainer" style="background-color:#f1f1f1">
+                        <a href="https://www.youtube.com/"><button type="xbutton" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Confirm Buy</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+{% endblock %}

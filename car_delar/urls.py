@@ -41,7 +41,9 @@ urlpatterns = [
     path('registration/',home.views.registrationPage,name='registration'),
     path('updatepass/',home.views.updatepass_view,name='updatepass'),
     path('rent/',home.views.rent_view,name='rent'),
+    path('parts/',home.views.parts_view,name='parts'),
     path('rentconfirmation/',home.views.rentconfirmation_view,name='rentconfirmation'),
+    # path('buyconfirmation/',home.views.buyconfirmation_view,name='buyconfirmation'),
     path('car/', home.views.car_view, name='car'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

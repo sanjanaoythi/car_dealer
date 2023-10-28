@@ -62,10 +62,18 @@ def rent_view(request):
     return render(request,'rent.html')
 
 @login_required(login_url='login')
-def rentconfirmation_view(request):
-    return render(request,'rentconfirmation.html')   
+def parts_view(request):
+    return render(request,'parts.html')
 
 @login_required(login_url='login')
+def rentconfirmation_view(request):
+    return render(request,'rentconfirmation.html')
+
+# @login_required(login_url='login')
+# def buyconfirmation_view(request):
+#     return render(request,'buyconfirmation.html')
+
+# @login_required(login_url='login')
 def home_view(request):
     return render(request,'home.html')
 def login_view(request):

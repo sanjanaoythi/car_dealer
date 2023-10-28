@@ -1,0 +1,242 @@
+{% extends 'navbar.html'%}
+
+{% load static %}
+
+{% block title %}
+Car Parts
+{% endblock %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'rent.css' %}">
+<link rel="stylesheet" href="{% static 'order.css' %}">
+
+<section class="cars" id="cars">
+<div class="container">
+    <h1 class="heading" >Car Parts <span>Selling</span></h1>
+    <div class="work-list">
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Hood</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Hood</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Titanium
+                    <span class="fas fa-circle"></span> Grade A
+                    <span class="fas fa-circle"></span> Price: 5000 taka
+                </p>
+                <button class="newbtn" onclick="
+                    // Show the modal
+                    document.getElementById('id01').style.display = 'block';
+                    " style="width:auto;">
+                    Buy
+                </button>
+                <!-- <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a> -->
+                <div id="id01" class="modal">
+                    <form class="modal-content animate">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="{% static 'image/parts/hood.webp' %}" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="xcontainer">
+                            <label><b>Material: </b>Titanium</label><br>
+                            <label>Grade A</label><br>
+                            <label>Total cost 5000 taka<span id="rentedHours"></span></label>
+                            <br>
+                        </div>
+                        <div class="xcontainer" style="background-color:#f1f1f1">
+                            <a href="http://127.0.0.1:8000/home.html/"><button type="xbutton" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Confirm Order</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Rear View Mirror</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Rear View Mirror</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Size: 29 Cm X 15 Cm X 29 Cm
+                    <span class="fas fa-circle"></span> 3cm thick
+                    <span class="fas fa-circle"></span>Price: 5000 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+        
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Head Lights</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Head Lights</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Halogen/LED
+                    <span class="fas fa-circle"></span> Bulb: D3s/D4r/D1r
+                    <span class="fas fa-circle"></span>Price: 3500 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Tail Lights</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Tail Lights</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Halogen/LED
+                    <span class="fas fa-circle"></span> Bulb: D3s/D4r/D1r
+                    <span class="fas fa-circle"></span>Price: 3500 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Tires</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Tires</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Type: P 
+                    <span class="fas fa-circle"></span> Width: 215mm
+                    <span class="fas fa-circle"></span> Aspect ratio: 65
+                    <span class="fas fa-circle"></span> Diameter: 15inch
+                    <span class="fas fa-circle"></span> Load Index: 89
+                    <span class="fas fa-circle"></span>Price: 8000 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Battery</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Battery</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> CCA: 600
+                    <span class="fas fa-circle"></span> 18volts
+                    <span class="fas fa-circle"></span>Price: 15000 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Air Filter</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Air filter</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Filter type: Air Recirculation Filter
+                    <span class="fas fa-circle"></span> Shape: Trapeze
+                    <span class="fas fa-circle"></span> Length:243mm. Width:190mm. Height:57mm
+                    <span class="fas fa-circle"></span>Price: 2500 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Oil Filter</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Oil Filter</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Metalrial: Metal
+                    <span class="fas fa-circle"></span> Filtration: 25 microns
+                    <span class="fas fa-circle"></span> Air Porosity: 500
+                    <span class="fas fa-circle"></span>Price: 5000 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Steering Wheel</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Steering Wheel</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Material: Rubber, Leather/Plastic
+                    <span class="fas fa-circle"></span> Diameter: 15 inch
+                    <span class="fas fa-circle"></span> Grip Circumference: 3 inch
+                    <span class="fas fa-circle"></span>Price: 5000 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="work">
+                <img src="{% static 'image/parts/hood.webp' %}" alt="">
+                <div class="layer">
+                    <h1>Windscreen</h1>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Windscreen</h3>
+                <!-- <div class="price"> <span>Car ID : </span> audi_s5_0 </div> -->
+                <p>
+                    <span class="fas fa-circle"></span> Material: Glass
+                    <span class="fas fa-circle"></span> Size: 29 Cm X 15 Cm X 29 Cm
+                    <span class="fas fa-circle"></span> 3cm thick
+                    <span class="fas fa-circle"></span>Price: 5000 taka
+                </p>
+                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+{% endblock %}
