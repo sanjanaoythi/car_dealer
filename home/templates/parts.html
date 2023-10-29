@@ -72,7 +72,30 @@ Car Parts
                     <span class="fas fa-circle"></span> 3cm thick
                     <span class="fas fa-circle"></span>Price: 5000 taka
                 </p>
-                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+                <!-- <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a> -->
+                <button class="newbtn" onclick="
+                    // Show the modal
+                    document.getElementById('id02').style.display = 'block';
+                    " style="width:auto;">
+                    Buy
+                </button>
+                <div id="id02" class="modal">
+                    <form class="modal-content animate">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="{% static 'image/parts/rearviewmirror.png' %}" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="xcontainer">
+                            <label><b>Size: 29 Cm X 15 Cm X 29 Cm </b></label><br>
+                            <label>3cm thick</label><br>
+                            <label>Total cost 5000 taka<span id="rentedHours"></span></label>
+                            <br>
+                        </div>
+                        <div class="xcontainer" style="background-color:#f1f1f1">
+                            <a href="http://127.0.0.1:8000/home.html/"><button type="xbutton" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Confirm Order</button></a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         
@@ -91,7 +114,30 @@ Car Parts
                     <span class="fas fa-circle"></span> Bulb: D3s/D4r/D1r
                     <span class="fas fa-circle"></span>Price: 3500 taka
                 </p>
-                <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a>
+                <button class="newbtn" onclick="
+                    // Show the modal
+                    document.getElementById('id03').style.display = 'block';
+                    " style="width:auto;">
+                    Buy
+                </button>
+                <!-- <a href="http://127.0.0.1:8000/buyconfirmation/" class="btn">Buy</a> -->
+                <div id="id03" class="modal">
+                    <form class="modal-content animate">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="{% static 'image/parts/rearviewmirror.png' %}" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="xcontainer">
+                            <label><b>Size: 29 Cm X 15 Cm X 29 Cm </b></label><br>
+                            <label>3cm thick</label><br>
+                            <label>Total cost 5000 taka<span id="rentedHours"></span></label>
+                            <br>
+                        </div>
+                        <div class="xcontainer" style="background-color:#f1f1f1">
+                            <a href="http://127.0.0.1:8000/home.html/"><button type="xbutton" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Confirm Order</button></a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
